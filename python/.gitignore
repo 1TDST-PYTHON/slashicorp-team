@@ -1,1 +1,3 @@
-node_#modules
+node_modules
+__pycache__
+idea
