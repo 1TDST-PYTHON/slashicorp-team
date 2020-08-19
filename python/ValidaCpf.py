@@ -30,20 +30,18 @@ def validar(cpf):
 
 # Versão antiga do IF para validação do CPF.
 
-def validar(cpf):
+def validar():
     validate = False
     while (validate == False):
         cpf = input("Digite um CPF do aluno: ")
         vercpf = verificar_cpf(cpf, 11)
         if (vercpf == False):
             print("CPF inválido")
-            validate = False
         elif cpf[9] == vercpf[0] and cpf[10] == vercpf[1]:
             print("CPF válido!")
             validate = True
         else:
             print("CPF inválido!")
-            validate = False
 
 
 

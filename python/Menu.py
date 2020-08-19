@@ -13,9 +13,9 @@ while (sair != 4):
     if menu == 1:
         print("Para realizar a inscrição informe os seguintes dados: ")
         nome = input("Digite o nome do aluno: ")
-        cpf = input("Digite seu CPF: ")
+        cpf = 0
         ValidaCpf.validar(cpf)
-        estado = str(input("Escolha o estado que deseja fazer o curso: ")).upper()
+        estado = ""
         ValidaEstado.validar_estado(estado)
         curso = input("Escolha um dos cursos disponíveis: ")
         nome.append(nome)
