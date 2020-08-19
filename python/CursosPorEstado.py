@@ -1,3 +1,4 @@
+cursos = {}
 def cursos_por_estado(estado: str) -> None:
     """
     Função que recebe uma a sigla de um estado e imprime na tela os cursos disponiveis naquele estado
@@ -18,6 +19,7 @@ def cursos_por_estado(estado: str) -> None:
         "A04": "Programação Python",
         "A05": "Programação Java"
     }
+    
     print(34 * '-')
     print(f" CODIGO{'CURSO'.rjust(20)}")
     print(34 * '-')
@@ -38,3 +40,5 @@ def cursos_por_estado(estado: str) -> None:
             if estado in curso_permi["A05"]:
                 print(f"  {codigo.ljust(12)}{curso}")
     print(34 * '-')
+    
+    
