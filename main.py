@@ -37,7 +37,13 @@ while (sair != 4):
         else:
             print("Opção Inválida")
     elif menu == 3:
-        print("nada")
+        matriz = [nome, cpf, estado, curso]
+        print("Imprimir lista aninhada: ")
+        for lista in matriz:
+            for elemento in lista:
+                print(elemento, end=' ')
+            print()
+
     elif menu == 4:
         break
     else:
