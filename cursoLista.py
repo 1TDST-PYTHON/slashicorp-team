@@ -6,9 +6,9 @@ def cursos_por_estado(estado: str) -> None:
     """
     estado = estado.upper()
     curso_permi = {
-        "A02": ["MA", "PI", "CE", "RN", "PE", "PB", "SE", "AL", "BA" ],
+        "A02": ["MA", "PI", "CE", "RN", "PE", "PB", "SE", "AL", "BA"],
         "A03": ["MT", "MS", "GO", "DF"],
-        "A04": ["AM", "RR", "AP", "PA", "TO", "RO", "AC","MG","RJ", "SP", "ES","PR", "RS", "SC"],
+        "A04": ["AM", "RR", "AP", "PA", "TO", "RO", "AC", "MG", "RJ", "SP", "ES", "PR", "RS", "SC"],
         "A05": ["MG", "SP", "ES"]
     }
     cursos = {

@@ -1,5 +1,9 @@
 estaValido = False
-estados = ("AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS","MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SE", "SP", "TO")
+estados = (
+    "AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ",
+    "RN",
+    "RS", "RO", "RR", "SC", "SE", "SP", "TO")
+
 
 def validar(estado):
     global estaValido
