@@ -2,12 +2,16 @@ import cpfValido
 import estadoValido
 import cursoLista
 
+codigo = []
 nome = []
 cpf = []
 estado = []
 curso = []
-aluno = [nome, cpf, estado, curso]
+#aluno = [[codigo], [nome], [cpf], [estado], [curso]]
+aluno = {'codigo' : [codigo], 'nome': [nome], 'cpf' : [cpf], 'estado' : [estado], 'curso' : [curso]}
 sair = 0
+i = 0
+
 while (sair != 4):
     print('\nMenu')
     menu = int(input("1. Fazer Inscrição\n2. Alterar Inscrição\n3. Listar Inscrições\n4. Sair\n:"))
@@ -15,20 +19,25 @@ while (sair != 4):
         print("\nInformações para a inscrição:")
         _nome = input("Nome do aluno: ")
         _cpf = 0
-        while cpfValido.estaValido != True:
+        while not cpfValido.estaValido:
             _cpf = input("CPF: ")
             cpfValido.validar(_cpf)
         _estado = ''
-        while estadoValido.estaValido != True:
+        while not estadoValido.estaValido:
             _estado = input("Estado que deseja fazer o curso: ").upper()
             estadoValido.validar(_estado)
         cursoLista.cursos_por_estado(_estado)
+        _curso = input("Escolha um dos cursos disponíveis: ")
+
+        i = i + 1
+        codigo.append(i)
         nome.append(_nome)
         cpf.append(_cpf)
         estado.append(_estado)
+        curso.append(_curso)
         cpfValido.estaValido= False
         estadoValido.estaValido = False
-
+        
     elif menu == 2:
         opcao1 = int(input("1. Alterar inscrição pelo cpf\n2. Alterar inscrição pelo código de inscrição\n:"))
         if opcao1 == 1:

@@ -1,5 +1,6 @@
 estaValido = False
 
+
 def verificar_cpf(cpf, digitos):
     if len(cpf) != digitos:
         return False
@@ -17,12 +18,14 @@ def verificar_cpf(cpf, digitos):
         else:
             digitok = 11 - k
     return str(digitoj) + str(digitok)
+
+
 def validar(cpf):
     global estaValido
     vercpf = verificar_cpf(cpf, 11)
     if (vercpf == False):
         print("\033[31mCPF inválido\033[m")
-        
+
     elif cpf[9] == vercpf[0] and cpf[10] == vercpf[1]:
         print("\033[32mCPF válido!\033[m")
         estaValido = True
