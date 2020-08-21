@@ -8,7 +8,6 @@ cpf = []
 estado = []
 curso = []
 aluno = [[codigo], [nome], [cpf], [estado], [curso]]
-# aluno = {'codigo': [codigo], 'nome': [nome], 'cpf': [cpf], 'estado': [estado], 'curso': [curso]}
 sair = 0
 i = 1000
 
@@ -34,7 +33,7 @@ while (sair != 4):
         estado.append(_estado)
         cpfValido.estaValido= False
         estadoValido.estaValido = False
-        
+
     elif menu == 2:
         opcao1 = int(input("1. Alterar inscrição pelo CPF\n2. Alterar inscrição pelo código de inscrição\n:"))
         if opcao1 == 1:
@@ -48,10 +47,9 @@ while (sair != 4):
             print(34 * '-')
             print(f" {codigoimport.ljust(0)} - {cursoimport}")
             print(34 * '-')
-            #linha 52 arrumar array da lista de nomes por curso
-            print(str(i) + ' - ' + nome + ' - ' + estado)
+            print(str(codigo) + ' - ' + str(nome) + ' - ' + str(estado))
             print(34 * '-')
-            print('Total de alunos: ', len(aluno[0]), '\n')
+            print('Total de alunos: ', len(codigo), '\n')
     elif menu == 4:
         break
     else:
