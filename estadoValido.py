@@ -11,6 +11,6 @@ def validar(estado):
         if estado in estados:
             estaValido = True
         else:
-            print("\033[31mEste Estado não existe!\033")
+            print("\033[31mEste Estado não existe!\033[m")
     else:
-        print("\033[31mDigite 2 caracteres para a sigla do Estado!\033")
+        print("\033[31mDigite 2 caracteres para a sigla do Estado!\033[m")
