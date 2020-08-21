@@ -27,6 +27,12 @@ while (sair != 4):
             _estado = input("Estado que deseja fazer o curso: ").upper()
             estadoValido.validar(_estado)
         cursoLista.cursos_por_estado(_estado)
+<<<<<<< HEAD
+=======
+        _curso = input("Escolha um dos cursos disponíveis: ")
+
+        # a iteração começa em 0, então o primeiro código sera 1
+>>>>>>> a9e736ca7df60bc877ddb3508aeaf883abd280dc
         i = i + 1
         codigo.append(i)
         nome.append(_nome)
