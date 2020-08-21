@@ -29,6 +29,7 @@ while (sair != 4):
         cursoLista.cursos_por_estado(_estado)
         _curso = input("Escolha um dos cursos disponíveis: ")
 
+        # a iteração começa em 0, então o primeiro código sera 1
         i = i + 1
         codigo.append(i)
         nome.append(_nome)
