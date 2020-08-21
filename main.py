@@ -2,7 +2,6 @@ import cpfValido
 import estadoValido
 import cursoLista
 
-
 nome = []
 cpf = []
 estado = []
@@ -39,13 +38,13 @@ while (sair != 4):
         else:
             print("Opção Inválida")
     elif menu == 3:
-        matriz = [nome, cpf, estado, curso]
-        print("Imprimir lista aninhada: ")
-        for lista in aluno:
-            for elemento in lista:
-                print(elemento, end=' ')
+        for codigoimport, cursoimport in cursoLista.cursos.items():
+            print(34 * '-')
+            print(f" {codigoimport.ljust(12)}{cursoimport}")
+            print(34 * '-')
             print()
-        print('Total de alunos: ', len(aluno[0]))
+            print(34 * '-')
+            print('Total de alunos: ', len(aluno[0]), '\n')
     elif menu == 4:
         break
     else:

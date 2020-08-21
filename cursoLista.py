@@ -1,3 +1,22 @@
+curso_permi = {
+        "A01":("PR", "RS", "SC","MG","RJ",
+         "SP", "ES","MT", "MS", "GO","MA",
+          "PI", "CE", "RN", "PE", "PB",
+           "SE", "AL", "BA","AM", "RR", "AP",
+            "PA", "TO", "RO", "AC"),
+        "A02": ("MA", "PI", "CE", "RN", "PE", "PB", "SE", "AL", "BA" ),
+        "A03": ("MT", "MS", "GO", "DF"),
+        "A04": ("AM", "RR", "AP", "PA", "TO", "RO", "AC","MG","RJ", "SP", "ES","PR", "RS", "SC"),
+        "A05": ("MG", "SP", "ES")
+    }
+cursos = {
+        "A01": "AI e Machine Learing",
+        "A02": "Business Inteligence",
+        "A03": "Governança em TI",
+        "A04": "Programação Python",
+        "A05": "Programação Java"
+    }
+
 def cursos_por_estado(estado: str) -> str:
     """
     Função que recebe uma a sigla de um estado, imprime na tela os cursos disponiveis naquele estado
@@ -17,24 +36,7 @@ def cursos_por_estado(estado: str) -> str:
             curso = input("Escolha um dos cursos disponíveis: ").upper()
         return curso
     estado = estado.upper()
-    curso_permi = {
-        "A01":("PR", "RS", "SC","MG","RJ",
-         "SP", "ES","MT", "MS", "GO","MA",
-          "PI", "CE", "RN", "PE", "PB",
-           "SE", "AL", "BA","AM", "RR", "AP",
-            "PA", "TO", "RO", "AC"),
-        "A02": ("MA", "PI", "CE", "RN", "PE", "PB", "SE", "AL", "BA" ),
-        "A03": ("MT", "MS", "GO", "DF"),
-        "A04": ("AM", "RR", "AP", "PA", "TO", "RO", "AC","MG","RJ", "SP", "ES","PR", "RS", "SC"),
-        "A05": ("MG", "SP", "ES")
-    }
-    cursos = {
-        "A01": "AI e Machine Learing",
-        "A02": "Business Inteligence",
-        "A03": "Governança em TI",
-        "A04": "Programação Python",
-        "A05": "Programação Java"
-    }
+
     print(34 * '-')
     print(f" CODIGO{'CURSO'.rjust(20)}")
     print(34 * '-')
