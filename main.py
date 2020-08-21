@@ -10,7 +10,7 @@ curso = []
 aluno = [[codigo], [nome], [cpf], [estado], [curso]]
 # aluno = {'codigo': [codigo], 'nome': [nome], 'cpf': [cpf], 'estado': [estado], 'curso': [curso]}
 sair = 0
-i = 0
+i = 1000
 
 while (sair != 4):
     print('\nMenu')
@@ -27,7 +27,7 @@ while (sair != 4):
             _estado = input("Estado que deseja fazer o curso: ").upper()
             estadoValido.validar(_estado)
         cursoLista.cursos_por_estado(_estado)
-        i = i + 1
+        i += 1
         codigo.append(i)
         nome.append(_nome)
         cpf.append(_cpf)
@@ -48,7 +48,8 @@ while (sair != 4):
             print(34 * '-')
             print(f" {codigoimport.ljust(0)} - {cursoimport}")
             print(34 * '-')
-            # print( """id + ' - ' + """ , _nome + ' - ' + _estado)
+            #linha 52 arrumar array da lista de nomes por curso
+            print(str(i) + ' - ' + nome + ' - ' + estado)
             print(34 * '-')
             print('Total de alunos: ', len(aluno[0]), '\n')
     elif menu == 4:
