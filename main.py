@@ -48,13 +48,13 @@ while (sair != 4):
         else:
             print("Opção Inválida")
     elif menu == 3:
-        matriz = [codigo, nome, cpf, estado, curso]
-        print("Imprimir lista alinhada: ")
-        for lista in matriz:
-            for elemento in lista:
-                print(elemento, end=' ')
+        for codigoimport, cursoimport in cursoLista.cursos.items():
+            print(34 * '-')
+            print(f" {codigoimport.ljust(12)}{cursoimport}")
+            print(34 * '-')
             print()
-
+            print(34 * '-')
+            print('Total de alunos: ', len(aluno[0]), '\n')
     elif menu == 4:
         break
     else:
