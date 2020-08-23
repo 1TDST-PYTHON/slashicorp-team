@@ -49,9 +49,6 @@ while (sair != 4):
             print(34 * '-')
             print(f" {codigoimport.ljust(0)} - {cursoimport}")
             print(34 * '-')
-            print(str(codigo) + ' - ' + str(nome) + ' - ' + str(estado))
-            print(34 * '-')
-            print('Total de alunos: ', len(codigo), '\n')
             x = PrettyTable(["Codigo", "Nome", "Estado"])
             x.align["Codigo"] = "l"
             x.align["Nome"] = "l"
@@ -62,6 +59,10 @@ while (sair != 4):
                 x.add_row([codigo[z], nome[z], estado[z]])
                 z = z + 1
             print(x)
+            print(34 * '-')
+            print('Total de alunos: ', len(codigo), '\n')
+            
+          
     elif menu == 4:
         break
     else:
