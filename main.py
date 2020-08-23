@@ -2,6 +2,8 @@ import cpfValido
 import estadoValido
 import cursoLista
 
+from prettytable import PrettyTable
+
 codigo = []
 nome = []
 cpf = []
@@ -31,7 +33,7 @@ while (sair != 4):
         nome.append(_nome)
         cpf.append(_cpf)
         estado.append(_estado)
-        cpfValido.estaValido= False
+        cpfValido.estaValido = False
         estadoValido.estaValido = False
 
     elif menu == 2:
@@ -50,6 +52,16 @@ while (sair != 4):
             print(str(codigo) + ' - ' + str(nome) + ' - ' + str(estado))
             print(34 * '-')
             print('Total de alunos: ', len(codigo), '\n')
+            x = PrettyTable(["Codigo", "Nome", "Estado"])
+            x.align["Codigo"] = "l"
+            x.align["Nome"] = "l"
+            x.align["Estado"] = "l"
+            x.padding_width = 1
+            z = 0
+            while z < len(codigo):
+                x.add_row([codigo[z], nome[z], estado[z]])
+                z = z + 1
+            print(x)
     elif menu == 4:
         break
     else:
