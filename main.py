@@ -12,6 +12,14 @@ aluno_novo = []
 sair = 0
 i = 1000
 
+dicionario = {
+    "codigo": (codigo),
+    "nome": (nome),
+    "curso": (curso),
+    "cpf": (cpf),
+    "estado": (estado)
+}
+
 while (sair != 4):
     print('\nMenu')
     menu = int(input("1. Fazer Inscrição\n2. Alterar Inscrição\n3. Listar Inscrições\n4. Sair\n:"))
@@ -54,6 +62,7 @@ while (sair != 4):
             count = 0
             print(34 * '-')
             print(f" {codigoimport.ljust(0)} - {cursoimport}")
+<<<<<<< HEAD
             for aluno in alunos:
                 if codigoimport == aluno[4]:
                     print(34 * '-')
@@ -62,6 +71,18 @@ while (sair != 4):
                     count += 1
             if count > 0:
                 print('Total de alunos: ', count, '\n')
+=======
+            print(34 * '-')
+            print(str(aluno) + ' - ' + str(nome) + ' - ' + str(estado))
+            print(34 * '-')
+            print('Total de alunos: ', len(codigo), '\n')
+    # elif menu == 3:
+    #     for codigo, nome in dicionario.items():
+    #         print(34 * '-')
+    #         print(f" {str(codigo).ljust(12)}{str(nome).ljust(12)}")
+    #     print(34 * '-')
+    #     print('Total de alunos: ', len(codigo), '\n')
+>>>>>>> 21b98e45dfea3e30da6c4f581d47202b74de680e
     elif menu == 4:
         break
     else:
