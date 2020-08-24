@@ -39,6 +39,8 @@ while (sair != 4):
         cpfValido.estaValido = False
         estadoValido.estaValido = False
 
+        print("\nCódigo da inscrição: ", i, "\nInscrição finalizada!")
+
     elif menu == 2:
         opcao1 = int(input("\t1. Alterar inscrição pelo CPF\n\t2. Alterar inscrição pelo código de inscrição\n=> "))
         if opcao1 == 1:
