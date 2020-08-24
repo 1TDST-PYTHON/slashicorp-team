@@ -62,7 +62,6 @@ while (sair != 4):
             count = 0
             print(34 * '-')
             print(f" {codigoimport.ljust(0)} - {cursoimport}")
-<<<<<<< HEAD
             for aluno in alunos:
                 if codigoimport == aluno[4]:
                     print(34 * '-')
@@ -71,7 +70,6 @@ while (sair != 4):
                     count += 1
             if count > 0:
                 print('Total de alunos: ', count, '\n')
-=======
             print(34 * '-')
             print(str(aluno) + ' - ' + str(nome) + ' - ' + str(estado))
             print(34 * '-')
@@ -82,7 +80,6 @@ while (sair != 4):
     #         print(f" {str(codigo).ljust(12)}{str(nome).ljust(12)}")
     #     print(34 * '-')
     #     print('Total de alunos: ', len(codigo), '\n')
->>>>>>> 21b98e45dfea3e30da6c4f581d47202b74de680e
     elif menu == 4:
         break
     else:
