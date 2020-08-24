@@ -22,7 +22,7 @@ while (sair != 4):
         while not cpfValido.estaValido:
             _cpf = input("CPF: ")
             if _cpf in cpf:
-                print("CPF já cadastrado.")
+                print("\033[31mCPF já cadastrado.\033[m")
             else:
                 cpfValido.validar(_cpf)
 
@@ -56,7 +56,7 @@ while (sair != 4):
                     aluno[3] = novo_estado
                     # troca o curso
                     aluno[4] = novo_curso
-                    print("\nAlteração finalizada!")
+                    print("\n\033[32mAlteração finalizada com sucesso!\033[m")
         elif opcao1 == 2:
             codigo_alteracao = int(input("Informe o código de inscrição: "))
             # o loop abaixo irá verificar aluno por aluno na lista alunos
@@ -72,7 +72,7 @@ while (sair != 4):
                     aluno[4] = novo_curso
                     print("\nAlteração finalizada!")
         else:
-            print("Opção Inválida")
+            print("\033[31mOpção Inválida\033[m")
 
     elif menu == 3:
         for codigoimport, cursoimport in cursoLista.cursos.items():
@@ -90,8 +90,8 @@ while (sair != 4):
                     qtd += 1
             # exibe apenas se a qtd total de inscritos for maior que 0                
             if qtd > 0:
-                print('Total de inscritos: ', qtd, '\n')
+                print('\nTotal de inscritos: ', qtd, '\n')
     elif menu == 4:
         break
     else:
-        print("Opção Inválida")
+        print("\033[31mOpção Inválida\033[m")
