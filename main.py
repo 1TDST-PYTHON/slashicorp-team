@@ -14,7 +14,7 @@ i = 1000
 
 while (sair != 4):
     print('\nMenu')
-    menu = int(input("1. Fazer Inscrição\n2. Alterar Inscrição\n3. Listar Inscrições\n4. Sair\n=> "))
+    menu = int(input("\t1. Fazer Inscrição\n\t2. Alterar Inscrição\n\t3. Listar Inscrições\n\t4. Sair\n=> "))
     if menu == 1:
         print("\nInformações para a inscrição:")
         _nome = input("Nome do aluno: ")
@@ -40,7 +40,7 @@ while (sair != 4):
         estadoValido.estaValido = False
 
     elif menu == 2:
-        opcao1 = int(input("1. Alterar inscrição pelo CPF\n2. Alterar inscrição pelo código de inscrição\n=> "))
+        opcao1 = int(input("\t1. Alterar inscrição pelo CPF\n\t2. Alterar inscrição pelo código de inscrição\n=> "))
         if opcao1 == 1:
             cpf_alteracao = input("Informe seu CPF: ")
             # o loop abaixo irá verificar aluno por aluno na lista alunos
@@ -67,6 +67,7 @@ while (sair != 4):
                     aluno[3] = novo_estado
                     # troca o curso
                     aluno[4] = novo_curso
+                    print("\nAlteração finalizada!")
         else:
             print("Opção Inválida")
 
