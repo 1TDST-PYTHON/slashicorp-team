@@ -38,6 +38,7 @@ while (sair != 4):
         alunos.append([i, _nome, _cpf, _estado, curso])
         cpfValido.estaValido = False
         estadoValido.estaValido = False
+
     elif menu == 2:
         opcao1 = int(input("1. Alterar inscrição pelo CPF\n2. Alterar inscrição pelo código de inscrição\n=> "))
         if opcao1 == 1:
@@ -56,13 +57,16 @@ while (sair != 4):
             for aluno in alunos:
                 # verifica quando chega no codigo digitado
                 if aluno[0] == codigo_alteracao:
-                    novo_estado = input("Digite o novo estado: ")
+                    novo_estado = input("Digite o novo estado: ").upper()
                     estadoValido.validar(novo_estado)
+                    novo_curso = cursoLista.cursos_por_estado(novo_estado)
                     # troca o estado
                     aluno[3] = novo_estado
-
+                    # troca o curso
+                    aluno[4] = novo_curso
         else:
             print("Opção Inválida")
+
     elif menu == 3:
         for codigoimport, cursoimport in cursoLista.cursos.items():
             # a variável a baixo irá contabilizar a quantidade de alunos por curso
