@@ -14,7 +14,7 @@ i = 1000
 
 while (sair != 4):
     print('\nMenu')
-    menu = int(input("1. Fazer Inscrição\n2. Alterar Inscrição\n3. Listar Inscrições\n4. Sair\n:"))
+    menu = int(input("1. Fazer Inscrição\n2. Alterar Inscrição\n3. Listar Inscrições\n4. Sair\n=> "))
     if menu == 1:
         print("\nInformações para a inscrição:")
         _nome = input("Nome do aluno: ")
@@ -39,7 +39,7 @@ while (sair != 4):
         cpfValido.estaValido = False
         estadoValido.estaValido = False
     elif menu == 2:
-        opcao1 = int(input("1. Alterar inscrição pelo CPF\n2. Alterar inscrição pelo código de inscrição\n:"))
+        opcao1 = int(input("1. Alterar inscrição pelo CPF\n2. Alterar inscrição pelo código de inscrição\n=> "))
         if opcao1 == 1:
             cpf_alteracao = int(input("Informe seu CPF: "))
             # o loop abaixo irá verificar aluno por aluno na lista alunos
@@ -70,15 +70,16 @@ while (sair != 4):
             # head da visualização
             print(34 * '-')
             print(f" {codigoimport.ljust(0)} - {cursoimport}")
-            # o for 
+            # o for irá exibir aluno por aluno de acordo com o curso
             for aluno in alunos:
                 if codigoimport == aluno[4]:
                     print(34 * '-')
                     print(str(aluno[0]) + ' - ' + str(aluno[1]) + ' - ' + str(aluno[3]))
                     print(34 * '-')
                     qtd += 1
+            # exibe apenas se a qtd total de inscritos for maior que 0                
             if qtd > 0:
-                print('Total de alunos: ', qtd, '\n')
+                print('Total de inscritos: ', qtd, '\n')
     elif menu == 4:
         break
     else:
