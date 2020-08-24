@@ -12,7 +12,7 @@ sair = 0
 i = 1000
 
 dicionario = {
-    "codigo": (curso),
+    "codigo": (codigo),
     "nome": (nome),
     "curso": (curso),
     "cpf": (cpf),
@@ -55,11 +55,19 @@ while (sair != 4):
         else:
             print("Opção Inválida")
     elif menu == 3:
-        for codigo, nome in dicionario.items():
+        for codigoimport, cursoimport in cursoLista.cursos.items():
             print(34 * '-')
-            print(f" {str(codigo).ljust(12)}{str(nome).ljust(12)}")
-        print(34 * '-')
-        print('Total de alunos: ', len(codigo), '\n')
+            print(f" {codigoimport.ljust(0)} - {cursoimport}")
+            print(34 * '-')
+            print(str(aluno) + ' - ' + str(nome) + ' - ' + str(estado))
+            print(34 * '-')
+            print('Total de alunos: ', len(codigo), '\n')
+    # elif menu == 3:
+    #     for codigo, nome in dicionario.items():
+    #         print(34 * '-')
+    #         print(f" {str(codigo).ljust(12)}{str(nome).ljust(12)}")
+    #     print(34 * '-')
+    #     print('Total de alunos: ', len(codigo), '\n')
     elif menu == 4:
         break
     else:
