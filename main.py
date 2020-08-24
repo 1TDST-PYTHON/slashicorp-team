@@ -42,15 +42,18 @@ while (sair != 4):
     elif menu == 2:
         opcao1 = int(input("1. Alterar inscrição pelo CPF\n2. Alterar inscrição pelo código de inscrição\n=> "))
         if opcao1 == 1:
-            cpf_alteracao = int(input("Informe seu CPF: "))
+            cpf_alteracao = input("Informe seu CPF: ")
             # o loop abaixo irá verificar aluno por aluno na lista alunos
             for aluno in alunos:
                 # verifica quando chega no cpf digitado
                 if aluno[2] == cpf_alteracao:
-                    novo_estado = input("Digite o novo estado: ")
+                    novo_estado = input("Digite o novo estado: ").upper()
                     estadoValido.validar(novo_estado)
+                    novo_curso = cursoLista.cursos_por_estado(novo_estado)
                     # troca o estado 
                     aluno[3] = novo_estado
+                    # troca o curso
+                    aluno[4] = novo_curso
         elif opcao1 == 2:
             codigo_alteracao = int(input("Informe o código de inscrição: "))
             # o loop abaixo irá verificar aluno por aluno na lista alunos
