@@ -11,6 +11,14 @@ aluno = [[codigo], [nome], [cpf], [estado], [curso]]
 sair = 0
 i = 1000
 
+dicionario = {
+    "codigo": (curso),
+    "nome": (nome),
+    "curso": (curso),
+    "cpf": (cpf),
+    "estado": (estado)
+}
+
 while (sair != 4):
     print('\nMenu')
     menu = int(input("1. Fazer Inscrição\n2. Alterar Inscrição\n3. Listar Inscrições\n4. Sair\n:"))
@@ -47,13 +55,11 @@ while (sair != 4):
         else:
             print("Opção Inválida")
     elif menu == 3:
-        for codigoimport, cursoimport in cursoLista.cursos.items():
+        for codigo, nome in dicionario.items():
             print(34 * '-')
-            print(f" {codigoimport.ljust(0)} - {cursoimport}")
-            print(34 * '-')
-            print(str(codigo) + ' - ' + str(nome) + ' - ' + str(estado))
-            print(34 * '-')
-            print('Total de alunos: ', len(codigo), '\n')
+            print(f" {str(codigo).ljust(12)}{str(nome).ljust(12)}")
+        print(34 * '-')
+        print('Total de alunos: ', len(codigo), '\n')
     elif menu == 4:
         break
     else:

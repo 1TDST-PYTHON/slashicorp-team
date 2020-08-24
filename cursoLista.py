@@ -1,21 +1,22 @@
 curso_permi = {
-        "A01":("PR", "RS", "SC","MG","RJ",
-         "SP", "ES","MT", "MS", "GO","MA",
-          "PI", "CE", "RN", "PE", "PB",
-           "SE", "AL", "BA","AM", "RR", "AP",
+    "A01": ("PR", "RS", "SC", "MG", "RJ",
+            "SP", "ES", "MT", "MS", "GO", "MA",
+            "PI", "CE", "RN", "PE", "PB",
+            "SE", "AL", "BA", "AM", "RR", "AP",
             "PA", "TO", "RO", "AC"),
-        "A02": ("MA", "PI", "CE", "RN", "PE", "PB", "SE", "AL", "BA" ),
-        "A03": ("MT", "MS", "GO", "DF"),
-        "A04": ("AM", "RR", "AP", "PA", "TO", "RO", "AC","MG","RJ", "SP", "ES","PR", "RS", "SC"),
-        "A05": ("MG", "SP", "ES")
-    }
+    "A02": ("MA", "PI", "CE", "RN", "PE", "PB", "SE", "AL", "BA"),
+    "A03": ("MT", "MS", "GO", "DF"),
+    "A04": ("AM", "RR", "AP", "PA", "TO", "RO", "AC", "MG", "RJ", "SP", "ES", "PR", "RS", "SC"),
+    "A05": ("MG", "SP", "ES")
+}
 cursos = {
-        "A01": "AI e Machine Learing",
-        "A02": "Business Inteligence",
-        "A03": "Governança em TI",
-        "A04": "Programação Python",
-        "A05": "Programação Java"
-    }
+    "A01": "AI e Machine Learing",
+    "A02": "Business Inteligence",
+    "A03": "Governança em TI",
+    "A04": "Programação Python",
+    "A05": "Programação Java"
+}
+
 
 def cursos_por_estado(estado: str) -> str:
     """
@@ -24,6 +25,7 @@ def cursos_por_estado(estado: str) -> str:
     :param estado: uma string contendo a sigla do estado a ser avaliado
     :return: string contendo o codigo do curso selecionado
     """
+
     def select_curso(sg_estado: str) -> str:
         curso = input("Escolha um dos cursos disponíveis: ").upper()
         while True:
@@ -35,6 +37,7 @@ def cursos_por_estado(estado: str) -> str:
                 print("\033[31mO valor digitado não correponde ao código de um curso\033[m")
             curso = input("Escolha um dos cursos disponíveis: ").upper()
         return curso
+
     estado = estado.upper()
 
     print(34 * '-')
