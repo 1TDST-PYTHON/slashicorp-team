@@ -25,7 +25,7 @@ def cursos_por_estado(estado: str) -> str:
     :return: string contendo o codigo do curso selecionado
     """
     def select_curso(sg_estado: str) -> str:
-        curso = input("Escolha um dos cursos disponíveis: ").upper()
+        curso = input("Escolha um dos cursos disponíveis acima: ").upper()
         while True:
             if curso_permi.get(curso):
                 if estado in curso_permi[curso]:

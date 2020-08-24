@@ -7,7 +7,8 @@ nome = []
 cpf = []
 estado = []
 curso = []
-aluno = [[codigo], [nome], [cpf], [estado], [curso]]
+alunos = []
+aluno_novo = []
 sair = 0
 i = 1000
 
@@ -29,31 +30,38 @@ while (sair != 4):
         while not estadoValido.estaValido:
             _estado = input("Estado que deseja fazer o curso: ").upper()
             estadoValido.validar(_estado)
-        cursoLista.cursos_por_estado(_estado)
+        curso = cursoLista.cursos_por_estado(_estado)
         i += 1
-        codigo.append(i)
-        nome.append(_nome)
-        cpf.append(_cpf)
-        estado.append(_estado)
+        alunos.append([i, _nome, _cpf, _estado, curso])
         cpfValido.estaValido = False
         estadoValido.estaValido = False
-
     elif menu == 2:
         opcao1 = int(input("1. Alterar inscrição pelo CPF\n2. Alterar inscrição pelo código de inscrição\n:"))
         if opcao1 == 1:
             alteraInscricaoCpf = int(input("Informe seu CPF: "))
         elif opcao1 == 2:
-            alteraInscricaoCD = int(input("Informe o código de inscrição: "))
+            codigo_alteracao = int(input("Informe o código de inscrição: "))
+            for aluno in alunos:
+                if aluno[0] == codigo_alteracao:
+                    novo_estado = input("Digite o novo estado: ")
+                    estadoValido.validar(novo_estado)
+                    aluno[3] = novo_estado
+
         else:
             print("Opção Inválida")
     elif menu == 3:
         for codigoimport, cursoimport in cursoLista.cursos.items():
+            count = 0
             print(34 * '-')
             print(f" {codigoimport.ljust(0)} - {cursoimport}")
-            print(34 * '-')
-            print(str(codigo) + ' - ' + str(nome) + ' - ' + str(estado))
-            print(34 * '-')
-            print('Total de alunos: ', len(codigo), '\n')
+            for aluno in alunos:
+                if codigoimport == aluno[4]:
+                    print(34 * '-')
+                    print(str(aluno[0]) + ' - ' + str(aluno[1]) + ' - ' + str(aluno[3]))
+                    print(34 * '-')
+                    count += 1
+            if count > 0:
+                print('Total de alunos: ', count, '\n')
     elif menu == 4:
         break
     else:
