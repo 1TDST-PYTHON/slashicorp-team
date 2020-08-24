@@ -35,7 +35,7 @@ while (sair != 4):
         nome.append(_nome)
         cpf.append(_cpf)
         estado.append(_estado)
-        cpfValido.estaValido= False
+        cpfValido.estaValido = False
         estadoValido.estaValido = False
 
     elif menu == 2:
