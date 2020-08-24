@@ -8,17 +8,9 @@ cpf = []
 estado = []
 curso = []
 alunos = []
-aluno_novo = []
 sair = 0
+# a variável i é utilizada como iteração para gerar o código de inscrição automático
 i = 1000
-
-dicionario = {
-    "codigo": (codigo),
-    "nome": (nome),
-    "curso": (curso),
-    "cpf": (cpf),
-    "estado": (estado)
-}
 
 while (sair != 4):
     print('\nMenu')
@@ -38,51 +30,55 @@ while (sair != 4):
         while not estadoValido.estaValido:
             _estado = input("Estado que deseja fazer o curso: ").upper()
             estadoValido.validar(_estado)
+        # recebe o retorno do curso da função cursos_por_estado
         curso = cursoLista.cursos_por_estado(_estado)
+        # incrementa para gerar o código da nova inscrição
         i += 1
+        # adiciona inscrição a lista alunos
         alunos.append([i, _nome, _cpf, _estado, curso])
         cpfValido.estaValido = False
         estadoValido.estaValido = False
     elif menu == 2:
         opcao1 = int(input("1. Alterar inscrição pelo CPF\n2. Alterar inscrição pelo código de inscrição\n:"))
         if opcao1 == 1:
-            alteraInscricaoCpf = int(input("Informe seu CPF: "))
+            cpf_alteracao = int(input("Informe seu CPF: "))
+            # o loop abaixo irá verificar aluno por aluno na lista alunos
+            for aluno in alunos:
+                # verifica quando chega no cpf digitado
+                if aluno[2] == cpf_alteracao:
+                    novo_estado = input("Digite o novo estado: ")
+                    estadoValido.validar(novo_estado)
+                    # troca o estado 
+                    aluno[3] = novo_estado
         elif opcao1 == 2:
             codigo_alteracao = int(input("Informe o código de inscrição: "))
+            # o loop abaixo irá verificar aluno por aluno na lista alunos
             for aluno in alunos:
+                # verifica quando chega no codigo digitado
                 if aluno[0] == codigo_alteracao:
                     novo_estado = input("Digite o novo estado: ")
                     estadoValido.validar(novo_estado)
+                    # troca o estado
                     aluno[3] = novo_estado
 
         else:
             print("Opção Inválida")
     elif menu == 3:
         for codigoimport, cursoimport in cursoLista.cursos.items():
-            count = 0
+            # a variável a baixo irá contabilizar a quantidade de alunos por curso
+            qtd = 0
+            # head da visualização
             print(34 * '-')
             print(f" {codigoimport.ljust(0)} - {cursoimport}")
-<<<<<<< HEAD
+            # o for 
             for aluno in alunos:
                 if codigoimport == aluno[4]:
                     print(34 * '-')
                     print(str(aluno[0]) + ' - ' + str(aluno[1]) + ' - ' + str(aluno[3]))
                     print(34 * '-')
-                    count += 1
-            if count > 0:
-                print('Total de alunos: ', count, '\n')
-=======
-            print(34 * '-')
-            print(str(aluno) + ' - ' + str(nome) + ' - ' + str(estado))
-            print(34 * '-')
-            print('Total de alunos: ', len(codigo), '\n')
-    # elif menu == 3:
-    #     for codigo, nome in dicionario.items():
-    #         print(34 * '-')
-    #         print(f" {str(codigo).ljust(12)}{str(nome).ljust(12)}")
-    #     print(34 * '-')
-    #     print('Total de alunos: ', len(codigo), '\n')
->>>>>>> 21b98e45dfea3e30da6c4f581d47202b74de680e
+                    qtd += 1
+            if qtd > 0:
+                print('Total de alunos: ', qtd, '\n')
     elif menu == 4:
         break
     else:

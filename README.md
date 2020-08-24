@@ -3,8 +3,8 @@
 ## Funções da versão 1.0
 
 - [x] Fazer Inscrições
-- [ ] Alterar Inscrições
-- [ ] Listar Inscrições
+- [X] Alterar Inscrições
+- [X] Listar Inscrições
 - [x] Função de Validação do CPF
 - [x] Função de Validação do Estado
 - [x] Função Cursos disponíveis de acordo com o Estado digitado pelo aluno
