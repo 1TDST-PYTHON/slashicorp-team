@@ -14,7 +14,7 @@ i = 1000
 
 while (sair != 4):
     print('\nMenu')
-    menu = int(input("1. Fazer Inscrição\n2. Alterar Inscrição\n3. Listar Inscrições\n4. Sair\n=> "))
+    menu = int(input("\t1. Fazer Inscrição\t\n2. Alterar Inscrição\t\n3. Listar Inscrições\t\n4. Sair\n=> "))
     if menu == 1:
         print("\nInformações para a inscrição:")
         _nome = input("Nome do aluno: ")
