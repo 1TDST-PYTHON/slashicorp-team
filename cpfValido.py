@@ -1,6 +1,5 @@
 estaValido = False
 
-
 def verificar_cpf(cpf, digitos):
     if len(cpf) != digitos:
         return False
