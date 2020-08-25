@@ -2,11 +2,8 @@ import cursoLista
 import cpfValido
 import estadoValido
 
-codigo = []
-nome = []
+
 cpf = []
-estado = []
-curso = []
 alunos = []
 sair = 0
 # a variável i é utilizada como iteração para gerar o código de inscrição automático
@@ -35,7 +32,7 @@ while (sair != 4):
         # incrementa para gerar o código da nova inscrição
         i += 1
         # adiciona inscrição a lista alunos
-        alunos.append([i, _nome, _cpf, _estado, curso])
+        alunos.append([i, _nome, _cpf, _estado, _curso])
         # adiciona na lista para verificar duplicidade
         cpf.append(_cpf)
         cpfValido.estaValido = False
