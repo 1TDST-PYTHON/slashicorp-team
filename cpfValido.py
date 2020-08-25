@@ -12,6 +12,8 @@ def verificar_cpf(cpf, digitos):
             digitoj = 11 - j
         k = ((11 * int(cpf[0])) + (10 * int(cpf[1])) + (9 * int(cpf[2])) + (8 * int(cpf[3])) + (7 * int(cpf[4])) \
              + (6 * int(cpf[5])) + (5 * int(cpf[6])) + (4 * int(cpf[7])) + (3 * int(cpf[8])) + (2 * digitoj)) % 11
+        if cpf == cpf[::-1]:
+            return False
         if k < 2:
             digitok = 0
         else:
