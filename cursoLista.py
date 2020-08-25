@@ -1,12 +1,8 @@
 curso_permi = {
-        "A01":("PR", "RS", "SC","MG","RJ",
-         "SP", "ES","MT", "MS", "GO","MA",
-          "PI", "CE", "RN", "PE", "PB",
-           "SE", "AL", "BA","AM", "RR", "AP",
-            "PA", "TO", "RO", "AC"),
-        "A02": ("MA", "PI", "CE", "RN", "PE", "PB", "SE", "AL", "BA" ),
+        "A01":("PR", "RS", "SC","MG","RJ","SP", "ES","MT", "MS", "GO", "MA", "PI", "CE", "RN", "PE", "PB","SE", "AL", "BA", "AM", "RR", "AP", "PA", "TO", "RO", "AC"),
+        "A02": ("MA", "PI", "CE", "RN", "PE", "PB", "SE", "AL", "BA"),
         "A03": ("MT", "MS", "GO", "DF"),
-        "A04": ("AM", "RR", "AP", "PA", "TO", "RO", "AC","MG","RJ", "SP", "ES","PR", "RS", "SC"),
+        "A04": ("AM", "RR", "AP", "PA", "TO", "RO", "AC", "MG", "RJ", "SP", "ES", "PR", "RS", "SC"),
         "A05": ("MG", "SP", "ES")
     }
 cursos = {
@@ -18,12 +14,6 @@ cursos = {
     }
 
 def cursos_por_estado(estado: str) -> str:
-    """
-    Função que recebe uma a sigla de um estado, imprime na tela os cursos disponiveis naquele estado
-    pede ao usuario selecionar o curso que deseja(efetua a validação desse input) e retorna uma string com o codigo do curso selecionado
-    :param estado: uma string contendo a sigla do estado a ser avaliado
-    :return: string contendo o codigo do curso selecionado
-    """
     def select_curso(sg_estado: str) -> str:
         curso = input("\nEscolha um dos cursos disponíveis acima: ").upper()
         while True:
