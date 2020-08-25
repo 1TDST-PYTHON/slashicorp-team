@@ -90,7 +90,6 @@ while (sair != 4):
                     print(34 * '-')
                     qtd += 1
             # exibe apenas se a qtd total de inscritos for maior que 0                
-            if qtd > 0:
                 print('\nTotal de inscritos: ', qtd, '\n')
     elif menu == 4:
         break
