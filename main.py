@@ -36,6 +36,7 @@ while (sair != 4):
         i += 1
         # adiciona inscrição a lista alunos
         alunos.append([i, _nome, _cpf, _estado, curso])
+        cpf.append(_cpf)
         cpfValido.estaValido = False
         estadoValido.estaValido = False
 
