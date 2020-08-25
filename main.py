@@ -89,8 +89,7 @@ while (sair != 4):
                     print(34 * '-')
                     print(str(aluno[0]) + ' - ' + str(aluno[1]) + ' - ' + str(aluno[3]))
                     print(34 * '-')
-                    qtd += 1
-            # exibe apenas se a qtd total de inscritos for maior que 0                
+                    qtd += 1             
             print('\nTotal de inscritos: ', qtd, '\n')
     elif menu == 4:
         break
