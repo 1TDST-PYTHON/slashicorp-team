@@ -21,8 +21,8 @@ while (sair != 4):
                 print("\033[31mCPF já cadastrado.\033[m")
             else:
                 cpfValido.validar(_cpf)
-
         _estado = ''
+
         while not estadoValido.estaValido:
             _estado = input("Estado que deseja fazer o curso: ").upper()
             estadoValido.validar(_estado)
@@ -32,7 +32,6 @@ while (sair != 4):
         cpf.append(_cpf)
         cpfValido.estaValido = False
         estadoValido.estaValido = False
-
         print("\nCódigo da inscrição: ", i, "\nInscrição finalizada!")
 
     elif menu == 2:
@@ -68,10 +67,11 @@ while (sair != 4):
             for aluno in alunos:
                 if codigoimport == aluno[4]:
                     print(34 * '-')
-                    print(str(aluno[0]) + ' - ' + str(aluno[1]) + ' - ' + str(aluno[3]))
+                    print(str(aluno[0]) + ' - ' + str(aluno[1]) + ' - ' + estadoValido.encontraCapital(aluno[3]))
                     print(34 * '-')
-                    qtd += 1             
+                    qtd += 1
             print('\nTotal de inscritos: ', qtd, '\n')
+
     elif menu == 4:
         break
     else:
